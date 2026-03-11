@@ -43,25 +43,38 @@
     nav a { margin-left: 24px; color: var(--muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
     nav a:hover { color: var(--accent); }
 
-    /* Hero Section */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 80px;
-    }
-    .hero img {
-      width: 100%;
-      border-radius: 20px;
-      aspect-ratio: 1/1;
-      object-fit: cover;
-      border: 1px solid var(--border);
-    }
-    h1 { font-size: 42px; margin-bottom: 16px; line-height: 1.1; }
-    h2 { margin: 40px 0 20px; font-size: 28px; color: var(--accent); }
-    p { margin-bottom: 16px; color: var(--muted); font-size: 17px; }
+  /* Refined, Centered Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 80px;
+  padding: 0 20px;
+}
 
+/* The Professional Pill Shape */
+.hero-img-container {
+  width: 320px;
+  height: 420px;
+  flex-shrink: 0;
+  border-radius: 160px; /* This creates the perfect pill curve */
+  overflow: hidden;
+  border: 2px solid rgba(0, 188, 212, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hero-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 550px;
+}
     /* Grid Layout for Projects & Skills */
     .grid {
       display: grid;
@@ -137,9 +150,17 @@
 
     footer { text-align: center; color: var(--muted); margin-top: 80px; font-size: 14px; padding-bottom: 40px; }
 
-    @media(max-width:800px) {
-      .hero { grid-template-columns: 1fr; text-align: center; }
-      .hero img { order: -1; max-width: 250px; margin: 0 auto; }
+ @media(max-width:800px) {
+      .hero { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 30px;
+      }
+      .hero-img-container { 
+        order: -1; 
+        width: 260px; 
+        height: 340px; 
+      }
       h1 { font-size: 32px; }
     }
   </style>
@@ -156,16 +177,19 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <div>
+ <section class="hero">
+      <div class="hero-text">
         <h1>Network & Cloud Portfolio</h1>
-        <p>Hi, I’m <strong>Daniel Stubbs</strong>, a Sydney-based IT graduate specialising in <strong>enterprise networking</strong> and <strong>cloud infrastructure</strong>.</p>
+        <p>Hi, I’m <strong>Daniel Stubbs</strong>, a Sydney-based IT graduate specializing in <strong>enterprise networking</strong> and <strong>cloud infrastructure</strong>.</p>
         <p>Certified <strong>AWS Cloud Practitioner</strong> with a focus on reliable infrastructure and automation.</p>
         <a href="Daniel Stubbs Resume 2026.pdf" download style="text-decoration: none;">
             <button type="button" style="margin-top: 10px; width: auto;">Download Resume (PDF)</button>
         </a>
       </div>
-      <img src="PXL_20250615_021333856.jpg" alt="Daniel Stubbs Profile Picture">
+
+      <div class="hero-img-container">
+        <img src="Daniel_Stubbs_Professional_Headshot.jpg" alt="Daniel Stubbs Professional Headshot">
+      </div>
     </section>
 
     <section id="projects">
@@ -225,13 +249,13 @@
         </form>
         <div class="success-message" id="success-message">
           <h3>✅ Success!</h3>
-          <p>Thanks Daniel, I'll get back to you shortly.</p>
+          <p>Thank You, I'll get back to you shortly.</p>
         </div>
       </div>
     </section>
 
     <footer>
-      © <span id="year"></span> Daniel Stubbs — Built for Performance
+      © <span id="year"></span>Daniel Stubbs — 2026 Portfolio
     </footer>
   </div>
 
@@ -260,3 +284,4 @@
   </script>
 </body>
 </html>
+
