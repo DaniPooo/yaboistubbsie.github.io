@@ -6,17 +6,14 @@
   <title>Daniel Stubbs — Network & Cloud Portfolio</title>
   
   <link rel="icon" type="image/jpeg" href="PIG.jpg" />
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   
-  <meta name="description" content="Portfolio of Daniel Stubbs, IT graduate specialising in networking, cloud, and server management." />
   <style>
     :root {
       --bg: #0b1220;
       --card: #101a2e;
       --muted: #a1adc3;
       --accent: #00bcd4;
-      --glass: rgba(255, 255, 255, 0.03);
       --border: rgba(255, 255, 255, 0.08);
       --led-green: #2ecc71;
       --led-amber: #f39c12;
@@ -28,7 +25,6 @@
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background-color: var(--bg);
-      /* Network Grid Background */
       background-image: radial-gradient(rgba(0, 188, 212, 0.1) 1px, transparent 1px);
       background-size: 40px 40px;
       color: #e6eef6;
@@ -37,145 +33,60 @@
 
     .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
 
-    /* Navigation */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-      padding: 20px 0;
-    }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; padding: 20px 0; }
     .logo { font-size: 24px; font-weight: 800; color: var(--accent); letter-spacing: -0.5px; text-transform: uppercase; }
     nav a { margin-left: 24px; color: var(--muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
     nav a:hover { color: var(--accent); }
 
-    /* Hero Section */
-    .hero {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      gap: 50px;
-      margin-bottom: 80px;
-    }
+    .hero { display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 50px; margin-bottom: 80px; }
     .hero-text { flex: 1; max-width: 600px; }
     .hero-text h1 { font-size: 48px; margin-bottom: 16px; line-height: 1.1; color: #fff; }
     .hero-text p { margin-bottom: 20px; color: var(--muted); font-size: 18px; }
 
-    /* Pill Shape Image */
-    .hero-img-container {
-      width: 300px;
-      height: 400px;
-      flex-shrink: 0;
-      border-radius: 150px;
-      overflow: hidden;
-      border: 2px solid var(--border);
-      box-shadow: 0 0 30px rgba(0, 188, 212, 0.1);
-    }
+    .hero-img-container { width: 300px; height: 400px; flex-shrink: 0; border-radius: 150px; overflow: hidden; border: 2px solid var(--border); box-shadow: 0 0 30px rgba(0, 188, 212, 0.1); }
     .hero-img-container img { width: 100%; height: 100%; object-fit: cover; }
 
-    /* LED Status Lights */
-    .led {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      margin-right: 8px;
-    }
+    .led { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
     .led-green { background: var(--led-green); box-shadow: 0 0 8px var(--led-green); }
-    .led-amber { 
-      background: var(--led-amber); 
-      box-shadow: 0 0 8px var(--led-amber); 
-      animation: flicker 2s infinite; 
-    }
+    .led-amber { background: var(--led-amber); box-shadow: 0 0 8px var(--led-amber); animation: flicker 2s infinite; }
 
     @keyframes flicker {
       0%, 100% { opacity: 1; }
       15% { opacity: 0.4; }
       20% { opacity: 1; }
       50% { opacity: 0.3; }
-      55% { opacity: 1; }
       80% { opacity: 0.2; }
     }
 
-    /* Cards */
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-    .card {
-      background: var(--card);
-      padding: 30px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      border-color: var(--accent);
-      box-shadow: 0 10px 30px rgba(0, 188, 212, 0.15);
-    }
+    .card { background: var(--card); padding: 30px; border-radius: 20px; border: 1px solid var(--border); transition: 0.3s; }
+    .card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0, 188, 212, 0.15); }
     .card h3 { color: #fff; margin-bottom: 15px; display: flex; align-items: center; font-size: 20px; }
-    .card h3 i { margin-right: 12px; color: var(--accent); font-size: 1.2rem; } /* Icon Style */
+    .card h3 i { margin-right: 12px; color: var(--accent); }
     
     h2 { margin: 60px 0 30px; font-size: 32px; color: var(--accent); font-weight: 800; display: flex; align-items: center; }
 
-    /* CLI Style Skill Badges */
     ul.skills { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-    ul.skills li {
-      background: rgba(0, 0, 0, 0.3);
-      padding: 6px 14px;
-      border-radius: 6px;
-      color: var(--accent);
-      font-family: 'Fira Code', 'Courier New', monospace; 
-      font-size: 13px;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-    }
-    ul.skills li i { margin-right: 8px; font-size: 0.9rem; }
+    ul.skills li { background: rgba(0, 0, 0, 0.3); padding: 6px 14px; border-radius: 6px; color: var(--accent); font-family: monospace; font-size: 13px; border: 1px solid var(--border); display: flex; align-items: center; }
+    ul.skills li i { margin-right: 8px; }
 
-    /* Resume Button */
-    .btn-resume {
-      background: var(--accent);
-      color: #041e26;
-      font-weight: 700;
-      padding: 14px 28px;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.3s;
-      display: inline-block;
-      text-decoration: none;
-    }
+    .btn-resume { background: var(--accent); color: #041e26; font-weight: 700; padding: 14px 28px; border: none; border-radius: 12px; cursor: pointer; transition: 0.3s; display: inline-block; text-decoration: none; }
 
-    /* Contact Form & Power Button */
-    input, textarea {
-      background: rgba(0, 0, 0, 0.2);
-      border: 1px solid var(--border);
-      color: white;
-      padding: 14px;
-      border-radius: 12px;
-      width: 100%;
-      margin-bottom: 15px;
-      font-family: inherit;
-    }
+    input, textarea { background: rgba(0, 0, 0, 0.2); border: 1px solid var(--border); color: white; padding: 14px; border-radius: 12px; width: 100%; margin-bottom: 15px; font-family: inherit; }
     
-    .btn-power {
-      background: transparent;
-      color: var(--accent);
-      border: 2px solid var(--accent);
-      font-weight: 800;
-      padding: 16px;
+    .btn-power { background: transparent; color: var(--accent); border: 2px solid var(--accent); font-weight: 800; padding: 16px; border-radius: 12px; width: 100%; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+    .btn-power:hover { background: var(--accent); color: #0b1220; box-shadow: 0 0 20px var(--accent); }
+
+    /* SUCCESS MESSAGE - INITIALLY HIDDEN */
+    .success-message {
+      display: none; /* This ensures it is hidden by default */
+      background: rgba(46, 204, 113, 0.1);
+      border: 1px solid var(--led-green);
+      padding: 30px;
       border-radius: 12px;
-      width: 100%;
-      cursor: pointer;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      transition: 0.3s;
+      text-align: center;
     }
-    .btn-power:hover {
-      background: var(--accent);
-      color: #0b1220;
-      box-shadow: 0 0 20px var(--accent);
-    }
+    .success-message h3 { color: var(--led-green); margin-bottom: 10px; justify-content: center; }
 
     footer { text-align: center; color: var(--muted); margin-top: 100px; padding-bottom: 40px; font-size: 14px; }
 
@@ -204,9 +115,8 @@
         <p>Hi, I’m <strong>Daniel Stubbs</strong>, a Sydney-based IT graduate specialising in <strong>enterprise networking</strong> and <strong>cloud infrastructure</strong>.</p>
         <p>I have a proven track record in configuring secure environments, managing hybrid cloud deployments, and troubleshooting complex systems.</p>
         <p>Currently an <strong>AWS Certified Cloud Practitioner</strong>, I am passionate about building resilient, automated infrastructure.</p>
-        <a href="Daniel Stubbs Resume 2026.pdf" download class="btn-resume" style="margin-top: 10px;">Download Resume (PDF)</a>
+        <a href="Daniel Stubbs Resume 2026.pdf" download class="btn-resume">Download Resume (PDF)</a>
       </div>
-
       <div class="hero-img-container">
         <img src="PXL_20250615_021333856.jpg" alt="Daniel Stubbs">
       </div>
@@ -225,7 +135,7 @@
         </div>
         <div class="card">
           <h3><span class="led led-amber"></span><i class="fab fa-aws"></i>AWS Cloud Challenge</h3>
-          <p>Placed <strong>4th nationally</strong> in the WorldSkills AWS Challenge, deploying multi-tier EC2/RDS environments.</p>
+          <p>Placed 4th nationally in the WorldSkills AWS Challenge, deploying multi-tier EC2/RDS environments.</p>
         </div>
         <div class="card">
           <h3><span class="led led-amber"></span><i class="fas fa-shield-alt"></i>Remote Access VPN</h3>
@@ -274,38 +184,45 @@
           <textarea name="message" rows="5" placeholder="Enter message..." required></textarea>
           <button type="submit" class="btn-power">Initiate Connection</button>
         </form>
-        <div class="success-message" id="success-message">
-          <h3>✅ Connection Established</h3>
+
+        <div id="success-message" class="success-message">
+          <h3><i class="fas fa-check-circle"></i> Connection Established</h3>
           <p>Thank you. I'll get back to you shortly.</p>
         </div>
       </div>
     </section>
 
     <footer>
-      © <span id="year"></span> Daniel Stubbs — Network Specialist — Built for Performance
+      © <span id="year"></span> Daniel Stubbs — Network Specialist — Sydney, AU
     </footer>
   </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const form = document.getElementById('contact-form');
-    const successMessage = document.getElementById('success-message');
+    
+    const contactForm = document.getElementById('contact-form');
+    const successDiv = document.getElementById('success-message');
 
-    form.addEventListener('submit', async (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const data = new FormData(form);
+      const data = new FormData(contactForm);
+      
       try {
-        const response = await fetch(form.action, {
-          method: form.method,
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
           body: data,
           headers: { 'Accept': 'application/json' }
         });
+
         if (response.ok) {
-          form.style.display = 'none';
-          successMessage.style.display = 'block';
+          // Hide the form and show the success message only now
+          contactForm.style.display = 'none';
+          successDiv.style.display = 'block';
+        } else {
+          alert("System Error: Could not send message. Please try again.");
         }
       } catch (error) {
-        alert("System Error: Could not send message.");
+        alert("Network Error: Please check your connection.");
       }
     });
   </script>
