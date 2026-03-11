@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,41 +43,47 @@
     nav a { margin-left: 24px; color: var(--muted); text-decoration: none; font-weight: 500; transition: 0.3s; }
     nav a:hover { color: var(--accent); }
 
-  /* Refined, Centered Hero Section */
-/* Hero Section Layout */
-.hero {
-  display: flex;
-  flex-direction: row;      /* Forces side-by-side on desktop */
-  justify-content: space-between; 
-  align-items: center;      /* Keeps text and photo vertically aligned */
-  gap: 50px;                /* Gap between text and photo */
-  margin-bottom: 80px;
-}
+    /* Hero Layout - Side by Side */
+    .hero {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 80px;
+    }
 
-.hero-text {
-  flex: 1;                  /* Lets text fill the available space */
-  max-width: 600px;         /* Keeps text lines from getting too long */
-}
+    .hero-text {
+      flex: 1;
+      max-width: 600px;
+    }
 
-/* Updated Pill Shape to fit the right side better */
-.hero-img-container {
-  width: 300px;             /* Slightly smaller to ensure it fits */
-  height: 380px;
-  flex-shrink: 0;           /* Crucial: prevents the photo from squishing */
-  border-radius: 150px;     /* Smooth pill curve */
-  overflow: hidden;
-  border: 2px solid rgba(0, 188, 212, 0.2);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
-.hero-text {
-  flex: 1;
-  max-width: 550px;
-}
+    .hero-text h1 { font-size: 42px; margin-bottom: 16px; line-height: 1.1; }
+    .hero-text p { margin-bottom: 20px; color: var(--muted); font-size: 17px; }
+
+    /* Professional Pill Container */
+    .hero-img-container {
+      width: 300px;
+      height: 380px;
+      flex-shrink: 0;
+      border-radius: 150px;
+      overflow: hidden;
+      border: 2px solid rgba(0, 188, 212, 0.2);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
     /* Grid Layout for Projects & Skills */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px; /* The spacing you requested */
+      gap: 24px;
     }
 
     .card {
@@ -92,20 +98,20 @@
       border-color: rgba(0, 188, 212, 0.4);
     }
     .card h3 { color: #fff; margin-bottom: 12px; font-size: 20px; }
-    .card p { font-size: 15px; line-height: 1.5; }
+    h2 { margin: 40px 0 20px; font-size: 28px; color: var(--accent); }
 
-    /* Skill "Pills" Logic */
+    /* Skill Badges */
     ul.skills {
       list-style: none;
       display: flex;
-      flex-wrap: wrap; /* Allows the badges to wrap like your screenshot */
+      flex-wrap: wrap;
       gap: 10px;
       margin-top: 15px;
     }
     ul.skills li {
       background: var(--glass);
       padding: 6px 14px;
-      border-radius: 100px; /* Pill shape */
+      border-radius: 100px;
       color: var(--muted);
       font-size: 13px;
       font-weight: 500;
@@ -121,11 +127,12 @@
       border: none;
       border-radius: 10px;
       padding: 14px 24px;
-      width: 100%;
+      width: auto;
       font-size: 16px;
       transition: 0.3s;
     }
     button:hover { opacity: 0.9; transform: scale(1.02); }
+    
     input, textarea {
       background: var(--glass);
       border: 1px solid var(--border);
@@ -148,7 +155,8 @@
 
     footer { text-align: center; color: var(--muted); margin-top: 80px; font-size: 14px; padding-bottom: 40px; }
 
- @media(max-width:800px) {
+    /* Mobile Responsiveness */
+    @media(max-width:800px) {
       .hero { 
         flex-direction: column; 
         text-align: center; 
@@ -159,7 +167,7 @@
         width: 260px; 
         height: 340px; 
       }
-      h1 { font-size: 32px; }
+      .hero-text h1 { font-size: 32px; }
     }
   </style>
 </head>
@@ -175,22 +183,23 @@
       </nav>
     </header>
 
-<div class="hero-text">
-  <h1>Network & Cloud Portfolio</h1>
-  
-  <p>Hi, I’m <strong>Daniel Stubbs</strong>, a Sydney-based IT graduate specialising in <strong>enterprise networking</strong> and <strong>cloud infrastructure</strong>.</p>
-  
-  <p>I have a proven track record in configuring secure environments, managing hybrid cloud deployments, and troubleshooting complex systems to ensure high availability and performance.</p>
-  
-  <p>Currently as a <strong>AWS Certified Cloud Practitioner</strong>, I am passionate about building resilient, automated infrastructure that supports modern business needs.</p>
-  
-  <a href="Daniel Stubbs Resume 2026.pdf" download style="text-decoration: none;">
-      <button type="button" style="margin-top: 20px; width: auto;">Download Resume (PDF)</button>
-  </a>
-</div>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Network & Cloud Portfolio</h1>
+        
+        <p>Hi, I’m <strong>Daniel Stubbs</strong>, a Sydney-based IT graduate specialising in <strong>enterprise networking</strong> and <strong>cloud infrastructure</strong>.</p>
+        
+        <p>I have a proven track record in configuring secure environments, managing hybrid cloud deployments, and troubleshooting complex systems to ensure high availability and performance.</p>
+        
+        <p>Currently an <strong>AWS Certified Cloud Practitioner</strong>, I am passionate about building resilient, automated infrastructure that supports modern business needs.</p>
+        
+        <a href="Daniel Stubbs Resume 2026.pdf" download style="text-decoration: none;">
+            <button type="button" style="margin-top: 10px;">Download Resume (PDF)</button>
+        </a>
+      </div>
 
       <div class="hero-img-container">
-       <img src="PXL_20250615_021333856.jpg" alt="Daniel Stubbs Professional Headshot">
+        <img src="PXL_20250615_021333856.jpg" alt="Daniel Stubbs Professional Headshot">
       </div>
     </section>
 
@@ -199,11 +208,11 @@
       <div class="grid">
         <div class="card">
           <h3>Enterprise LAN/WAN</h3>
-          <p>Designed a simulated enterprise network with VLANs, ACLs, and NAT using Cisco best practices.</p>
+          <p>Designed and configured a simulated enterprise network with VLANs, ACLs, and NAT using Cisco best practices.</p>
         </div>
         <div class="card">
           <h3>Windows Server Lab</h3>
-          <p>Deployed Active Directory, DNS, and GPOs to manage organizational security and permissions.</p>
+          <p>Deployed Active Directory, DNS, and GPOs to manage organisational security and permissions.</p>
         </div>
         <div class="card">
           <h3>AWS Cloud Challenge</h3>
@@ -232,7 +241,7 @@
           </ul>
         </div>
         <div class="card">
-          <h3>Tools</h3>
+          <h3>Tools & Scripting</h3>
           <ul class="skills">
             <li>PowerShell</li><li>Bash</li><li>Git</li><li>Documentation</li><li>Troubleshooting</li>
           </ul>
@@ -247,17 +256,17 @@
           <input type="text" name="name" placeholder="Name" required>
           <input type="email" name="email" placeholder="Email" required>
           <textarea name="message" rows="5" placeholder="How can I help?" required></textarea>
-          <button type="submit">Send Message</button>
+          <button type="submit" style="width: 100%;">Send Message</button>
         </form>
         <div class="success-message" id="success-message">
           <h3>✅ Success!</h3>
-          <p>Thank You, I'll get back to you shortly.</p>
+          <p>Thank you, I'll get back to you shortly.</p>
         </div>
       </div>
     </section>
 
     <footer>
-      © <span id="year"></span>Daniel Stubbs — 2026 Portfolio
+      © <span id="year"></span> Daniel Stubbs — 2026 Portfolio
     </footer>
   </div>
 
@@ -286,8 +295,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
