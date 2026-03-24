@@ -74,6 +74,9 @@
 
     input, textarea { background: rgba(0, 0, 0, 0.2); border: 1px solid var(--border); color: white; padding: 14px; border-radius: 12px; width: 100%; margin-bottom: 15px; font-family: inherit; }
     
+    /* Added to fix the stretching box issue */
+    textarea { resize: vertical; max-height: 300px; }
+    
     .btn-power { background: transparent; color: var(--accent); border: 2px solid var(--accent); font-weight: 800; padding: 16px; border-radius: 12px; width: 100%; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
     .btn-power:hover { background: var(--accent); color: #0b1220; box-shadow: 0 0 20px var(--accent); }
 
