@@ -77,9 +77,8 @@
     .btn-power { background: transparent; color: var(--accent); border: 2px solid var(--accent); font-weight: 800; padding: 16px; border-radius: 12px; width: 100%; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
     .btn-power:hover { background: var(--accent); color: #0b1220; box-shadow: 0 0 20px var(--accent); }
 
-    /* SUCCESS MESSAGE - INITIALLY HIDDEN */
     .success-message {
-      display: none; /* This ensures it is hidden by default */
+      display: none;
       background: rgba(46, 204, 113, 0.1);
       border: 1px solid var(--led-green);
       padding: 30px;
@@ -105,6 +104,7 @@
       <nav>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="resume.html">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -113,9 +113,13 @@
       <div class="hero-text">
         <h1>Network & Cloud Portfolio</h1>
         <p>Hi, I’m <strong>Daniel Stubbs</strong>, a Sydney-based IT graduate specialising in <strong>enterprise networking</strong> and <strong>cloud infrastructure</strong>.</p>
-        <p>I have a proven track record in configuring secure environments, managing hybrid cloud deployments, and troubleshooting complex systems.</p>
         <p>Currently an <strong>AWS Certified Cloud Practitioner</strong>, I am passionate about building resilient, automated infrastructure.</p>
-        <a href="Daniel Stubbs Resume 2026.pdf" download class="btn-resume">Download Resume (PDF)</a>
+        
+        <a href="resume.html" class="btn-resume">View Live Resume</a>
+        
+        <p style="margin-top: 15px; font-size: 14px; color: var(--muted);">
+          Looking for a file? <a href="Daniel_Stubbs_Resume.pdf" style="color: var(--accent); text-decoration: none;">Download PDF Version</a>
+        </p>
       </div>
       <div class="hero-img-container">
         <img src="PXL_20250615_021333856.jpg" alt="Daniel Stubbs">
@@ -215,7 +219,6 @@
         });
 
         if (response.ok) {
-          // Hide the form and show the success message only now
           contactForm.style.display = 'none';
           successDiv.style.display = 'block';
         } else {
@@ -228,6 +231,3 @@
   </script>
 </body>
 </html>
-
-
-
