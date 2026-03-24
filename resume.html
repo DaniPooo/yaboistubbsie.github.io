@@ -27,8 +27,7 @@
     }
 
     .resume-container {
-      max-width: 850px;
-      margin: 0 auto;
+      max-width: 850px;      margin: 0 auto;
       background: var(--card);
       padding: 60px;
       border-radius: 24px;
@@ -50,9 +49,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      transition: 0.3s;
     }
-    .back-link:hover { opacity: 0.7; }
 
     .print-btn {
       background: rgba(0, 188, 212, 0.1);
@@ -74,7 +71,7 @@
 
     h1 { font-size: 36px; color: #fff; margin-bottom: 10px; }
     .contact-info { color: var(--muted); display: flex; gap: 20px; flex-wrap: wrap; font-size: 15px; }
-    .contact-info i { color: var(--accent); }
+    .contact-info i { color: var(--accent); margin-right: 5px; }
 
     h2 { 
       font-size: 18px; 
@@ -89,7 +86,7 @@
     h2::after { content: ""; height: 1px; background: var(--border); flex: 1; }
 
     .experience-item { margin-bottom: 30px; }
-    .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+    .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
     .job-title { font-weight: 700; color: #fff; font-size: 19px; }
     .duration { color: var(--accent); font-family: monospace; font-size: 14px; }
     .company { color: var(--muted); font-weight: 500; margin-bottom: 10px; }
@@ -99,10 +96,10 @@
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
     }
-    .skill-cat h3 { font-size: 16px; color: #fff; margin-bottom: 15px; }
+    .skill-cat h3 { font-size: 16px; color: #fff; margin-bottom: 12px; }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
     .skill-tags li { 
       background: rgba(255,255,255,0.05); 
@@ -120,14 +117,7 @@
 
     @media print {
       body { background: white; color: #111; padding: 0; }
-      .resume-container { 
-        box-shadow: none; 
-        border: none; 
-        width: 100%; 
-        max-width: 100%; 
-        padding: 0; 
-        background: white; 
-      }
+      .resume-container { box-shadow: none; border: none; width: 100%; max-width: 100%; padding: 0; background: white; }
       .nav-buttons, .print-btn { display: none; }
       h1, .job-title, .skill-cat h3 { color: #000; }
       .duration, h2, .back-link { color: #222; }
@@ -142,108 +132,136 @@
   <div class="resume-container">
     <div class="nav-buttons">
       <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Portfolio</a>
-      <button onclick="window.print()" class="print-btn"><i class="fas fa-print"></i> Generate PDF</button>
+      <button onclick="window.print()" class="print-btn"><i class="fas fa-print"></i> Download as PDF</button>
     </div>
 
     <header>
       <h1>Daniel Stubbs</h1>
       <div class="contact-info">
         <span><i class="fas fa-map-marker-alt"></i> Sydney, NSW</span>
-        <span><i class="fas fa-envelope"></i> daniel@stubbs.one</span>
         <span><i class="fas fa-phone"></i> 0404 390 844</span>
+        <span><i class="fas fa-envelope"></i> daniel@stubbs.one</span>
+        <span><i class="fas fa-globe"></i> www.stubbs.one</span>
       </div>
     </header>
 
     <section>
-      <h2>Executive Summary</h2>
-      <p>IT professional and recent Diploma graduate specializing in Cloud and Advanced Networking. AWS Certified Cloud Practitioner with a proven ability to design, configure, and troubleshoot enterprise-level network infrastructures and cloud environments.</p>
+      <h2>Professional Profile</h2>
+      <p>Motivated IT Graduate and AWS Certified Cloud Practitioner with hands-on experience in technical support, cloud infrastructure, and enterprise networking[cite: 3]. Proven track record in troubleshooting end-user issues, managing Active Directory, and maintaining Windows-based systems[cite: 4]. Recognized as a WorldSkills National Finalist for excellence in cloud configuration[cite: 5].</p>
     </section>
 
     <section>
-      <h2>Technical Experience</h2>
-      
+      <h2>Certifications</h2>
+      <ul>
+        <li><strong>AWS Certified Cloud Practitioner</strong> — Amazon Web Services (2025) [cite: 8]</li>
+        <li><strong>In Progress:</strong> Preparing for AWS Solutions Architect - Associate & Cisco CCNA [cite: 9]</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-cat">
+          <h3>Cloud & Systems</h3>
+          <ul class="skill-tags">
+            <li>AWS (EC2, S3, IAM, VPC)</li>
+            <li>Basic Azure</li>
+            <li>Windows Server (2019/2022)</li>
+            <li>Active Directory</li>
+            <li>Linux (Ubuntu/CentOS)</li>
+            <li>VirtualBox/Hyper-V</li>
+          </ul>
+        </div>
+        <div class="skill-cat">
+          <h3>Networking & Support</h3>
+          <ul class="skill-tags">
+            <li>TCP/IP, DNS, DHCP</li>
+            <li>VLANs, NAT, ACLs</li>
+            <li>Cisco IOS</li>
+            <li>Microsoft 365</li>
+            <li>Remote Support</li>
+            <li>Ticketing Systems</li>
+          </ul>
+        </div>
+        <div class="skill-cat">
+          <h3>Tools & Scripting</h3>
+          <ul class="skill-tags">
+            <li>PowerShell</li>
+            <li>Bash</li>
+            <li>Git</li>
+            <li>SLA Management</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>IT Work Experience</h2>
       <div class="experience-item">
         <div class="exp-header">
           <span class="job-title">IT Support Intern / Help Desk</span>
           <span class="duration">2024 — 2025</span>
         </div>
-        <div class="company">Trafalgar Fire — Sydney, AU</div>
+        <div class="company">Trafalgar Fire, Sydney</div>
         <ul>
-          <li>Managed day-to-day Level 1 and 2 technical support for internal staff.</li>
-          <li>Administered Active Directory, Microsoft 365, and Group Policy (GPO).</li>
-          <li>Maintained hardware inventory and assisted in network documentation.</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="exp-header">
-          <span class="job-title">Warehouse Supervisor</span>
-          <span class="duration">2022 — 2024</span>
-        </div>
-        <div class="company">Sydney, AU</div>
-        <ul>
-          <li>Led operations and logistics teams, ensuring high-efficiency workflows.</li>
-          <li>Managed inventory systems and coordinated multi-departmental logistics.</li>
+          <li>Provided Level 1 technical support for desktop, printer, and network issues[cite: 19].</li>
+          <li>Managed Active Directory user accounts, including password resets and access provisioning[cite: 20].</li>
+          <li>Resolved support requests using a ticketing system in line with SLA targets[cite: 21].</li>
+          <li>Supported Microsoft 365 applications and assisted with user onboarding/offboarding[cite: 22, 23].</li>
+          <li>Troubleshot hardware, software, and basic network connectivity (DNS, DHCP)[cite: 24].</li>
         </ul>
       </div>
     </section>
 
     <section>
-      <h2>Education & Certs</h2>
+      <h2>Awards & Projects</h2>
       <div class="experience-item">
         <div class="exp-header">
-          <span class="job-title">Diploma of Information Technology</span>
-          <span class="duration">Graduated 2025</span>
+          <span class="job-title">WorldSkills Australia — AWS Cloud Skills Challenge</span>
+          <span class="duration">National Finalist (4th)</span>
         </div>
-        <div class="company">TAFE NSW (Cloud and Advanced Networking)</div>
+        <ul>
+          <li>Deployed complex AWS infrastructure using both CLI and GUI under strict constraints[cite: 33].</li>
+          <li>Configured secure networking and security groups for enterprise-scale simulations[cite: 34].</li>
+        </ul>
       </div>
-      
-      <ul style="list-style: none; padding: 0;">
-        <li style="color: #fff;"><i class="fab fa-aws" style="color: var(--accent); margin-right: 10px;"></i> <strong>AWS Certified Cloud Practitioner</strong> (2025)</li>
-        <li style="color: #fff;"><i class="fas fa-award" style="color: var(--accent); margin-right: 10px;"></i> <strong>AWS Cloud Skills Challenge</strong> — National Finalist (WorldSkills AU)</li>
-        <li style="color: #fff;"><i class="fas fa-book" style="color: var(--accent); margin-right: 10px;"></i> <strong>Cisco CCNA (200-301)</strong> — In Progress</li>
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="job-title">TAFE Project Labs</span>
+          <span class="duration">2024 — 2025</span>
+        </div>
+        <ul>
+          <li>Built environments using DHCP, DNS, VLANs, and Group Policy[cite: 28, 29].</li>
+          <li>Deployed and tested VPN and remote access solutions using Windows Server[cite: 30].</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Diploma of IT (Cloud and Advanced Networking)</strong> | TAFE NSW | 2025 [cite: 38]</li>
+        <li><strong>Certificate IV in IT (Networking)</strong> | TAFE NSW | 2024 [cite: 39]</li>
+        <li><strong>Certificate III in IT (Networking)</strong> | TAFE NSW | 2024 [cite: 40]</li>
       </ul>
     </section>
 
     <section>
-      <h2>Skill Matrix</h2>
-      <div class="skills-grid">
-        <div class="skill-cat">
-          <h3>Network & Security</h3>
-          <ul class="skill-tags">
-            <li>VLANs</li>
-            <li>ACLs</li>
-            <li>NAT</li>
-            <li>BGP/OSPF</li>
-            <li>VPN/RADIUS</li>
-          </ul>
+      <h2>Additional Experience</h2>
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="job-title">Warehouse Storeman / Supervisor</span>
+          <span class="duration">2022 — 2024</span>
         </div>
-        <div class="skill-cat">
-          <h3>Cloud & Systems</h3>
-          <ul class="skill-tags">
-            <li>AWS (EC2/S3)</li>
-            <li>Azure</li>
-            <li>Win Server</li>
-            <li>Linux</li>
-            <li>Active Directory</li>
-          </ul>
-        </div>
-        <div class="skill-cat">
-          <h3>Automation</h3>
-          <ul class="skill-tags">
-            <li>Python</li>
-            <li>PowerShell</li>
-            <li>Git/GitHub</li>
-            <li>Scripting</li>
-          </ul>
-        </div>
+        <div class="company">Sydney, AU</div>
+        <p style="color: var(--muted); font-size: 14px;">Supervised staff and resolved operational issues under pressure in a high-volume environment[cite: 43, 44].</p>
       </div>
     </section>
-  </div>
 
-  <footer style="text-align: center; margin-top: 40px; color: var(--muted); font-size: 13px;">
-    Last Updated: March 2026
-  </footer>
+    <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; text-align: center;">
+      References available on request[cite: 46]. | Last Updated: March 2026
+    </footer>
+  </div>
 
 </body>
 </html>
