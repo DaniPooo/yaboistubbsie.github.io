@@ -73,6 +73,15 @@
     h1 { font-size: 36px; color: #fff; margin-bottom: 10px; }
     .contact-info { color: var(--muted); display: flex; gap: 20px; flex-wrap: wrap; font-size: 15px; }
     .contact-info i { color: var(--accent); margin-right: 5px; }
+    
+    .contact-info a {
+      color: inherit;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .contact-info a:hover {
+      color: var(--accent);
+    }
 
     h2 { 
       font-size: 18px; 
@@ -140,9 +149,9 @@
       <h1>Daniel Stubbs</h1>
       <div class="contact-info">
         <span><i class="fas fa-map-marker-alt"></i> Sydney, NSW</span>
-        <span><i class="fas fa-phone"></i> 0404 390 844</span>
-        <span><i class="fas fa-envelope"></i> daniel@stubbs.one</span>
-        <span><i class="fas fa-globe"></i> www.stubbs.one</span>
+        <span><i class="fas fa-phone"></i> <a href="tel:0404390844">0404 390 844</a></span>
+        <span><i class="fas fa-envelope"></i> <a href="mailto:daniel@stubbs.one">daniel@stubbs.one</a></span>
+        <span><i class="fas fa-globe"></i> <a href="http://www.stubbs.one">www.stubbs.one</a></span>
       </div>
     </header>
 
@@ -166,7 +175,7 @@
           <h3>Cloud & Systems</h3>
           <ul class="skill-tags">
             <li>AWS (EC2, S3, IAM, VPC)</li>
-            <li>Basic Azure</li>
+            <li>Basic Microsoft Azure</li>
             <li>Windows Server (2019/2022)</li>
             <li>Active Directory</li>
             <li>Linux (Ubuntu/CentOS)</li>
