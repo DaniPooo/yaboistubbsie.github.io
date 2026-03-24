@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Daniel Stubbs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #101a2e;
+      --accent: #00bcd4;
+      --muted: #a1adc3;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: #e6eef6;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .resume-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card);
+      padding: 50px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    h1 { font-size: 32px; color: #fff; }
+    h2 { font-size: 20px; color: var(--accent); margin-top: 30px; text-transform: uppercase; letter-spacing: 1px; }
+    
+    .job { margin-bottom: 25px; }
+    .job-title { font-weight: 700; color: #fff; font-size: 18px; }
+    .job-meta { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    ul { padding-left: 20px; }
+    li { margin-bottom: 5px; }
+
+    @media (max-width: 600px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .resume-container { padding: 20px; }
+    }
+
+    .print-btn {
+      float: right;
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    
+    @media print {
+      .back-link, .print-btn { display: none; }
+      body { background: white; color: black; padding: 0; }
+      .resume-container { border: none; width: 100%; max-width: 100%; padding: 0; }
+      h1, h2, .job-title { color: black; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-container">
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+    <button onclick="window.print()" class="print-btn"><i class="fas fa-print"></i> Print to PDF</button>
+
+    <header>
+      <h1>Daniel Stubbs</h1>
+      <p>Sydney, NSW | daniel@stubbs.one</p>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>IT Professional and AWS Certified Cloud Practitioner with a focus on enterprise networking, cloud infrastructure, and technical support. National Finalist in the AWS Cloud Skills Challenge.</p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="job">
+        <div class="job-title">IT Support Intern / Help Desk</div>
+        <div class="job-meta">Trafalgar Fire | 2024 – 2025</div>
+        <ul>
+          <li>Provided Level 1/2 technical support for onsite and remote staff.</li>
+          <li>Managed Active Directory users and Group Policy Objects (GPOs).</li>
+          <li>Troubleshot network connectivity and hardware issues.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications & Education</h2>
+      <ul>
+        <li><strong>AWS Certified Cloud Practitioner</strong> (2025)</li>
+        <li><strong>Diploma of IT (Cloud and Advanced Networking)</strong> – TAFE NSW (2025)</li>
+        <li><strong>Cisco CCNA (200-301)</strong> – In Progress</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <strong>Networking:</strong>
+          <ul>
+            <li>VLANs, ACLs, NAT</li>
+            <li>Routing (OSPF, BGP)</li>
+            <li>VPN (IPsec, RADIUS)</li>
+          </ul>
+        </div>
+        <div>
+          <strong>Cloud & Systems:</strong>
+          <ul>
+            <li>AWS (EC2, S3, RDS)</li>
+            <li>Windows Server / Azure</li>
+            <li>Python & PowerShell</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
