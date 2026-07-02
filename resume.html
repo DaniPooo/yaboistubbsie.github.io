@@ -107,6 +107,7 @@
     .job-title { font-weight: 700; color: #fff; font-size: 19px; }
     .duration { color: var(--accent); font-family: monospace; font-size: 14px; }
     .company { color: var(--muted); font-weight: 500; margin-bottom: 10px; }
+    .role-context { color: var(--muted); font-style: italic; font-size: 14px; margin-bottom: 15px; background: rgba(255, 255, 255, 0.02); padding: 12px; border-left: 3px solid var(--accent); border-radius: 4px; }
 
     ul { padding-left: 20px; color: var(--muted); }
     li { margin-bottom: 8px; }
@@ -138,7 +139,8 @@
       .nav-buttons, .print-btn { display: none; }
       h1, .job-title, .skill-cat h3 { color: #000; }
       .duration, h2, .back-link { color: #222; }
-      .contact-info, ul, .company { color: #444; }
+      .contact-info, ul, .company, .role-context { color: #444; }
+      .role-context { border-left: 3px solid #222; background: #fafafa; }
       .skill-tags li { border: 1px solid #ddd; color: #111; }
       h2::after { background: #eee; }
     }
@@ -213,35 +215,55 @@
     </section>
 
     <section>
-      <h2>IT Work Experience</h2>
+      <h2>IT & Operational Work Experience</h2>
       <div class="experience-item">
         <div class="exp-header">
-          <span class="job-title">IT Support Intern / Help Desk</span>
-          <span class="duration">2024 — 2025</span>
+          <span class="job-title">Operations Supervisor & IT Support (Hybrid Role)</span>
+          <span class="duration">2022 — Present</span>
         </div>
-        <div class="company">Trafalgar Fire, Sydney</div>
+        <div class="company">Sydney, AU</div>
+        <div class="role-context">
+          <strong>Role Context:</strong> Formally stepped into an ad-hoc desktop and network support capacity alongside primary operational duties to resolve technical issues company-wide. Serve as a key resource for stakeholders by offering technical knowledge to guide decisions, while acting as the primary internal interface to streamline the flow of information and accelerate troubleshooting with our 3rd party IT help desk.
+        </div>
         <ul>
-          <li>Provided Level 1 technical support for desktop, printer, and network issues.</li>
-          <li>Managed Active Directory user accounts, including password resets and access provisioning.</li>
-          <li>Resolved support requests using a ticketing system in line with SLA targets.</li>
-          <li>Supported Microsoft 365 applications and assisted with user onboarding/offboarding.</li>
-          <li>Troubleshot hardware, software, and basic network connectivity (DNS, DHCP).</li>
+          <li>Concurrently oversee daily business operations while serving as the primary on-site technical contact, handling IT support duties on an ad-hoc basis across the business as issues arise.</li>
+          <li>Provide Level 1 technical support for desktop, printer, and network connectivity issues (DNS, DHCP) in a fast-paced environment.</li>
+          <li>Communicate technical solutions clearly to non-technical staff to minimize company-wide operational downtime.</li>
+          <li>Manage Active Directory user accounts, including password resets, access provisioning, and group permissions.</li>
+          <li>Log, prioritize, and resolve support requests using a ticketing system in line with SLA targets.</li>
+          <li>Support Microsoft 365 applications, including Outlook and Teams, for local and remote end users.</li>
+          <li>Assist with user onboarding and offboarding, including account setup and system access configuration.</li>
+          <li>Escalate complex technical issues to senior engineers and external vendors as required.</li>
+          <li>Supervise operational staff and resolve fast-paced logistical challenges under pressure.</li>
         </ul>
       </div>
     </section>
 
     <section>
-      <h2>Awards & Projects</h2>
+      <h2>Awards & Achievements</h2>
       <div class="experience-item">
         <div class="exp-header">
           <span class="job-title">WorldSkills Australia — AWS Cloud Skills Challenge</span>
           <span class="duration">National Finalist (4th)</span>
         </div>
         <ul>
-          <li>Deployed complex AWS infrastructure using both CLI and GUI under strict constraints.</li>
-          <li>Configured secure networking and security groups for enterprise-scale simulations.</li>
+          <li>Competed at a national level, deploying complex AWS infrastructure using both CLI and GUI under strict time constraints.</li>
+          <li>Configured secure networking, security groups, and cloud services for enterprise-scale simulations.</li>
         </ul>
       </div>
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="job-title">WorldSkills NSW Regional Cloud Competition</span>
+          <span class="duration">Finalist</span>
+        </div>
+        <ul>
+          <li>Placed in the top tier of 30+ participants by demonstrating superior AWS design and troubleshooting abilities.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Project Experience (TAFE Labs)</h2>
       <div class="experience-item">
         <div class="exp-header">
           <span class="job-title">Enterprise Infrastructure Labs</span>
@@ -249,8 +271,10 @@
         </div>
         <div class="company">TAFE NSW</div>
         <ul>
-          <li>Engineered simulated enterprise networks by configuring core infrastructure services (DHCP, DNS) and segmenting traffic via VLANs.</li>
-          <li>Implemented secure remote access solutions, deploying client-to-site VPNs using Windows Server.</li>
+          <li>Configured and managed Active Directory environments including users, groups, and Group Policy.</li>
+          <li>Built and troubleshot networks using DHCP, DNS, VLANs, and routing.</li>
+          <li>Deployed and tested VPN and remote access solutions using Windows Server.</li>
+          <li>Simulated real-world IT support scenarios including troubleshooting user, system, and network issues.</li>
         </ul>
       </div>
     </section>
@@ -264,20 +288,8 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Additional Experience</h2>
-      <div class="experience-item">
-        <div class="exp-header">
-          <span class="job-title">Warehouse Storeman / Supervisor</span>
-          <span class="duration">2022 — 2024</span>
-        </div>
-        <div class="company">Sydney, AU</div>
-        <p style="color: var(--muted); font-size: 14px;">Supervised staff and resolved operational issues under pressure in a high-volume environment.</p>
-      </div>
-    </section>
-
     <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; text-align: center;">
-      References available on request. | Last Updated: March 2026
+      References available on request. | Last Updated: July 2026
     </footer>
   </div>
 
